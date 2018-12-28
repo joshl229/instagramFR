@@ -6,3 +6,4 @@ pip install requests
 pip install beautifulsoup4
 pip install parser
 pip install lxml
+sudo apt-get install python-opencv 
