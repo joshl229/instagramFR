@@ -6,4 +6,9 @@ pip install requests
 pip install beautifulsoup4
 pip install parser
 pip install lxml
-sudo apt-get install python-opencv 
+pip2 install face_recognition
+sudo apt-get install python-tk
+
+-- MUST INSTALL dlib BEFORE FACE_RECOGNITION -- 
+INSTRUCTIONS FOR INSTALLING dlib: https://github.com/davisking/dlib
+
