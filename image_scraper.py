@@ -5,6 +5,8 @@ import sys
 import os
 import os.path
 import shutil
+from Tkinter import *
+from PIL import Image, ImageTk
 
 try : # Tries to create a folder called images
     os.mkdir('images')
@@ -15,6 +17,21 @@ except: # If the image folder already exists it deletes the folder and creates a
     os.mkdir('images') # Creates a new folder
 
 private_tester = 0 # Create a variable to test if the profile is private or has no posts
+
+# Creates GUI window
+window = Tk() # Creates the GUI window
+window.title("Instagram Image Downloader")
+window.geometry("500x500")
+window.resizable(width=False, height=False)
+convert_img = Image.open("graphics/instaLogo.png")
+logo = ImageTk.PhotoImage(convert_img)
+Label(window, image=logo).grid(row=0, column=2,sticky="W") # Places Logo
+Label(window, text="\n         Enter Instagram Profile", font="arial 12 bold").grid(row=1, column=0, columnspan=3) # Places text
+textBox = Entry(window).grid(row=2, column=0, columnspan=3, sticky="NESW")
+
+
+
+
 
 # Downloads the image with the filename being the number image it is
 def download_image(url, number): # Creates the function and sets its parameters
@@ -52,3 +69,5 @@ while private_tester == 0: # Checks to make sure a valid user is entered
         print("Error: User Private Or Has No Photos. Please Enter A New User.\n") # Prints out error message
 
 print("Images Successfully Downloaded.\n") # Tells us that we downloaded a valid user's urls
+
+window.mainloop() # Runs the window
