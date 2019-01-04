@@ -110,7 +110,7 @@ def browsePressed():
 # GUI DEVELOPMENT:
 
 # Creates GUI window
-window.title("Instagram Image Downloader")
+window.title("Image Downloader")
 window.geometry("500x500")
 window.resizable(width=False, height=False)
 convert_img = Image.open("graphics/instaLogo.png")
@@ -134,6 +134,6 @@ submitBtn.grid(row=3, column=1,columnspan=2)
 
 # Creates Browse Button and initially hides it
 browseBtn = Button(window, text="Browse",command=browsePressed)
-browseBtn.grid_remove() # Hides the button 
+browseBtn.grid_remove() # Hides the button
 
 window.mainloop() # Runs the window
