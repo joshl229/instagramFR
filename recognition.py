@@ -111,3 +111,4 @@ if matching > 0:
 
 
     window.mainloop() # Runs the GUI window
+    print("Cleaning up...")
