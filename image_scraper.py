@@ -104,8 +104,8 @@ def browsePressed():
     # Updates status update and then closes app
     statusMsg.set("\tImage Successfully Imported.") # Changes the status message
     window.update() # Updates the window
-    time.sleep(3) # Waits three seconds before closing app
-    quit()
+    time.sleep(2) # Waits two seconds before closing app
+    window.destroy()
 
 # GUI DEVELOPMENT:
 
